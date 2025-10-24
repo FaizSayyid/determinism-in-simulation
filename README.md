@@ -48,7 +48,7 @@ This has a very large variance. It includes every age group, nationality, and ge
 
 This reduces the variance in outcomes because we have incorporated a known causal factor.  We can go further by adding additional inputs to our simulation (conditioning) for example, the heights of the parents:
 
-![p(x|sex,father_height,mother_height)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex},\text{father\_height},\text{mother\_height}))
+![p(x|sex,father_height,mother_height)](https://latex.codecogs.com/svg.image?p(x%7Csex,father_{height},mother_{height}))
 
 There will still be variance in this outcome; siblings of the same sex can differ in height, but adding these variables further reduces the spread of possible outcomes.  
 We can imagine continuing to condition on more relevant variables, each time shrinking the variance of the predictive distribution.  
