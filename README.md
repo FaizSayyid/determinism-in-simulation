@@ -46,8 +46,7 @@ This has a very large variance. It includes every age group, nationality, and ge
 
 ![p(x|sex=male)=N(μ_men,σ_men²)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex}=\text{male})=\mathcal{N}(\mu_{\text{men}},\sigma_{\text{men}}^2))
 
-This reduces the variance in outcomes because we have incorporated a known causal factor.  
-We can go further by adding additional inputs to our simulation — for example, the heights of the parents:
+This reduces the variance in outcomes because we have incorporated a known causal factor.  We can go further by adding additional inputs to our simulation (conditioning) for example, the heights of the parents:
 
 ![p(x|sex,father_height,mother_height)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex},\text{father\_height},\text{mother\_height}))
 
