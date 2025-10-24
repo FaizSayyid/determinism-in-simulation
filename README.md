@@ -35,29 +35,18 @@ With those out of the way let us consider the less clear cut cases. Recall our c
 1. We must know all relevant hidden variables, and  
 2. We must know them with infinite precision.
 
-### Dealing with Hidden variables
-Let's say we are trying to simulate the height of a human. There's obviously a wide range of acceptable heights. If this simulation were deterministic and only returned say, 2 meters then we would regard this as a pretty poor model. 
-
-An obvious improvement would be to specify the sex of the individual who's height we are trying to simulation. In probabality we call this conditioning, we change the model from $p(x)$ to $p(x|sex)$ e.g. $p(x) = N(u_men,\sigma_men)$. This reduces the variance in outcomes because we have incorporated a known causal factor.  We could go further we could add additional inputs to our simulation (or condition on) the heights of the parent:
-
- $p(x|sex,father_height, mother_height)$.
-
-There will still be variance in this outcome; siblings of the same sex can still differ in height but adding this variable to our simulation further shrink the variance of outcomes. We could imagine continuing to condition upon relevant variables, each time the variance in outcomes would shrink. In the limit, if we could condition upon all relevant variables and we understood the mechanics of all those variables, then the distribution of the outcomes would collapse to a delta function (a spike with no variance), assuming no quantum mechancial or irreversable processes. The more variables we have, the more deterministic the simulation becomes.
-
-In practice this isn't possible as we don't know all hidden variables nor do we know how they interact. In such cases one way to interpret the distribution over outcomes is to think of marginalisation over the hidden causes. For example if we assume that we can't know the conditions in the womb of then we can represent their influence as a sample from a distribution over womb conditions.
 
 ### Dealing with Hidden Variables
 
-Let’s say we are trying to simulate the height of a human.  
-There is obviously a wide range of possible heights, and simply returning the average would make for a poor model.  
-Let’s start by assuming as little as possible and simulate from the distribution over all human heights:
+Let’s say we are trying to simulate the height of a human.  There is obviously a wide range of possible heights, and simply returning the average would make for a poor model.  We can start by assuming as little as possible and simulate from the distribution over all human heights:
 
 ![p(x) = N(μ_humans, σ_humans²)](https://latex.codecogs.com/svg.image?p(x)=\mathcal{N}(\mu_{\text{humans}},\sigma_{\text{humans}}^2))
 
-This has a very large variance — it includes every age group, nationality, and genetic background.  
+This has a very large variance. It includes every age group, nationality, and genetic background.  An obvious improvement would be to specify the **sex** of the individual whose height we are trying to simulate. In probability, this is called *conditioning*: we change the model from 
 
-An obvious improvement would be to specify the **sex** of the individual whose height we are trying to simulate.  
-In probability, this is called *conditioning*: we change the model from ![p(x)](https://latex.codecogs.com/svg.image?p(x)) to ![p(x|sex)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex})), for example:
+![p(x)](https://latex.codecogs.com/svg.image?p(x)) to 
+
+![p(x|sex)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex})), for example:
 
 ![p(x|sex=male)=N(μ_men,σ_men²)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex}=\text{male})=\mathcal{N}(\mu_{\text{men}},\sigma_{\text{men}}^2))
 
