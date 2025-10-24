@@ -50,17 +50,11 @@ This reduces the variance in outcomes because we have incorporated a known causa
 
 ![p(x|sex,father_height,mother_height)](https://latex.codecogs.com/svg.image?p(x%7Csex,father_{height},mother_{height}))
 
-There will still be variance in this outcome; siblings of the same sex can differ in height, but adding these variables further reduces the spread of possible outcomes.  
-We can imagine continuing to condition on more relevant variables, each time shrinking the variance of the predictive distribution.  
+There will still be variance in this outcome; siblings of the same sex can differ in height, but adding these variables further reduces the spread of possible outcomes. We can imagine continuing to condition on more relevant variables, each time shrinking the variance of the predictive distribution.  In the limit, if we could condition on *all* relevant variables and fully understood the mechanics governing them, the distribution of heights would collapse to a **delta function** (a spike with zero variance) assuming no quantum-mechanical or irreversible processes. The more variables we know and condition on, the more deterministic the simulation becomes.
 
-In the limit, if we could condition on *all* relevant variables and fully understood the mechanics governing them, the distribution of outcomes would collapse to a **delta function** — a spike with zero variance — assuming no quantum-mechanical or irreversible processes.  
-The more variables we know and control for, the more deterministic the simulation becomes.
+In reality, this is rarely possible. We do not know all hidden variables, nor how they interact.  In such cases, one way to interpret the remaining randomness is as the result of **marginalisation over hidden causes**.  For example, if we cannot know the conditions in the womb precisely, we can represent their influence as a random draw from a distribution describing plausible womb conditions:
 
-In practice, this is rarely possible. We do not know all hidden variables, nor how they interact.  
-In such cases, one way to interpret the remaining randomness is as the result of **marginalisation over hidden causes**.  
-For example, if we cannot know the conditions in the womb precisely, we can represent their influence as a random draw from a distribution describing plausible womb conditions.
-
-
+![p(x|var_1,var_2,...,var_n)=∫p(x|var_1,var_2,...,var_n,var_womb)p(womb)d(womb)](https://latex.codecogs.com/svg.image?p(x%7Cvar_1,var_2,...,var_n)=\int%20p(x%7Cvar_1,var_2,...,var_n,var_{womb})%20p(womb)%20d(womb))
 
 ### The resulotion of hidden variables
 As previously discussed in some systems a very small change in input can produce a very large change in output. If we can measure the variables with infinite precision (as a laplace's demon could) then there would be no variance in outcome. In reality computers have a limited amount of memory and as such cannot represent varaibles with infite precision even if they are known. Again with stochasticity we can attempt to marginalise over the uncertainty in precision. On the other hand if we presume that variables that we wish to model are integer valued or occupy a very small space then this stochasiticty isn't necessary.
