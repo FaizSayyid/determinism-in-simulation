@@ -48,26 +48,23 @@ In practice this isn't possible as we don't know all hidden variables nor do we 
 
 ### Dealing with Hidden Variables
 
-Let’s say we are trying to simulate the height of a human. There is obviously a wide range of possible heights and returning the average would make for a poor model. Let's start out by assuming as little as possible and simply simulating from the distribution over all possible human heights.
-/[
-p( x ) = \mathcal{N}(\mu_{\text{humans}}, \sigma_{\text{humans}}^2).
-\]
+Let’s say we are trying to simulate the height of a human.  
+There is obviously a wide range of possible heights, and simply returning the average would make for a poor model.  
+Let’s start by assuming as little as possible and simulate from the distribution over all human heights:
 
-This has a very wide variance. This simulation is pulling from a distribution that includes all ages, genetic background etc
+![p(x) = N(μ_humans, σ_humans²)](https://latex.codecogs.com/svg.image?p(x)=\mathcal{N}(\mu_{\text{humans}},\sigma_{\text{humans}}^2))
+
+This has a very large variance — it includes every age group, nationality, and genetic background.  
 
 An obvious improvement would be to specify the **sex** of the individual whose height we are trying to simulate.  
-In probability, this is called *conditioning*: we change the model from \( p(x) \) to \( p(x \mid \text{sex}) \), for example
+In probability, this is called *conditioning*: we change the model from ![p(x)](https://latex.codecogs.com/svg.image?p(x)) to ![p(x|sex)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex})), for example:
 
-\[
-p(x \mid \text{sex} = \text{male}) = \mathcal{N}(\mu_{\text{men}}, \sigma_{\text{men}}^2).
-\]
+![p(x|sex=male)=N(μ_men,σ_men²)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex}=\text{male})=\mathcal{N}(\mu_{\text{men}},\sigma_{\text{men}}^2))
 
 This reduces the variance in outcomes because we have incorporated a known causal factor.  
 We can go further by adding additional inputs to our simulation — for example, the heights of the parents:
 
-\[
-p(x \mid \text{sex}, \text{father\_height}, \text{mother\_height}).
-\]
+![p(x|sex,father_height,mother_height)](https://latex.codecogs.com/svg.image?p(x\mid\text{sex},\text{father\_height},\text{mother\_height}))
 
 There will still be variance in this outcome; siblings of the same sex can differ in height, but adding these variables further reduces the spread of possible outcomes.  
 We can imagine continuing to condition on more relevant variables, each time shrinking the variance of the predictive distribution.  
@@ -77,7 +74,7 @@ The more variables we know and control for, the more deterministic the simulatio
 
 In practice, this is rarely possible. We do not know all hidden variables, nor how they interact.  
 In such cases, one way to interpret the remaining randomness is as the result of **marginalisation over hidden causes**.  
-For example, if we assume we cannot know the conditions in the womb precisely, we can represent their influence as a random draw from a distribution describing plausible womb conditions.
+For example, if we cannot know the conditions in the womb precisely, we can represent their influence as a random draw from a distribution describing plausible womb conditions.
 
 
 
