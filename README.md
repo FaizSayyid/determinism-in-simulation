@@ -46,19 +46,7 @@ Let’s say we are trying to simulate the height of a human.  There is obviously
 
 ![1](img/1.png)
 
-This has a very large variance. It includes every age group, nationality, and genetic background.  An obvious improvement would be to specify the **sex** of the individual whose height we are trying to simulate. In probability, this is called *conditioning*: we change the model from 
-
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?p(x)" alt="p(x)">
-</p>
-
-to 
-
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?p(x%7Csex)" alt="p(x|sex)">
-</p>
-
-:
+This has a very large variance. It includes every age group, nationality, and genetic background.  An obvious improvement would be to specify the **sex** of the individual whose height we are trying to simulate. In probability, this is called *conditioning*: we change the model from <img src="https://latex.codecogs.com/svg.image?p(x)" alt="p(x)"> to <img src="https://latex.codecogs.com/svg.image?p(x%7Csex)" alt="p(x|sex)">:
 
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?p(x%7Csex=male)=\mathcal{N}(\mu_{men},\sigma_{men}^2)" alt="p(x|sex=male)=N(μ_men,σ_men²)">
