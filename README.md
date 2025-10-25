@@ -42,11 +42,13 @@ Let’s say we are trying to simulate the height of a human.  There is obviously
 
 ![p(x) = N(μ_humans, σ_humans²)](https://latex.codecogs.com/svg.image?p(x)=\mathcal{N}(\mu_{\text{humans}},\sigma_{\text{humans}}^2))
 
-![P(x)](img/1.png)
+![1](img/1.png)
 
 This has a very large variance. It includes every age group, nationality, and genetic background.  An obvious improvement would be to specify the **sex** of the individual whose height we are trying to simulate. In probability, this is called *conditioning*: we change the model from ![p(x)](https://latex.codecogs.com/svg.image?p(x)) to ![p(x|sex)](https://latex.codecogs.com/svg.image?p(x%7Csex)) : 
 
 ![p(x|sex=male)=N(μ_men,σ_men²)](https://latex.codecogs.com/svg.image?p(x%7Csex=male)=\mathcal{N}(\mu_{men},\sigma_{men}^2))
+
+![2](img/2.png)
 
 This reduces the variance in outcomes because we have incorporated a known causal factor.  We can go further by adding additional inputs to our simulation (conditioning) for example, the heights of the parents:
 
