@@ -40,19 +40,37 @@ With those out of the way let us consider the less clear cut cases. Recall our c
 
 Let’s say we are trying to simulate the height of a human.  There is obviously a wide range of possible heights, and simply returning the average would make for a poor model.  We can start by assuming as little as possible and simulate from the distribution over all human heights:
 
-![p(x) = N(μ_humans, σ_humans²)](https://latex.codecogs.com/svg.image?p(x)=\mathcal{N}(\mu_{\text{humans}},\sigma_{\text{humans}}^2))
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?p(x)=\mathcal{N}(\mu_{\text{humans}},\sigma_{\text{humans}}^2)" alt="p(x) = N(μ_humans, σ_humans²)">
+</p>
 
 ![1](img/1.png)
 
-This has a very large variance. It includes every age group, nationality, and genetic background.  An obvious improvement would be to specify the **sex** of the individual whose height we are trying to simulate. In probability, this is called *conditioning*: we change the model from ![p(x)](https://latex.codecogs.com/svg.image?p(x)) to ![p(x|sex)](https://latex.codecogs.com/svg.image?p(x%7Csex)) : 
+This has a very large variance. It includes every age group, nationality, and genetic background.  An obvious improvement would be to specify the **sex** of the individual whose height we are trying to simulate. In probability, this is called *conditioning*: we change the model from 
 
-![p(x|sex=male)=N(μ_men,σ_men²)](https://latex.codecogs.com/svg.image?p(x%7Csex=male)=\mathcal{N}(\mu_{men},\sigma_{men}^2))
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?p(x)" alt="p(x)">
+</p>
+
+to 
+
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?p(x%7Csex)" alt="p(x|sex)">
+</p>
+
+:
+
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?p(x%7Csex=male)=\mathcal{N}(\mu_{men},\sigma_{men}^2)" alt="p(x|sex=male)=N(μ_men,σ_men²)">
+</p>
 
 ![2](img/2.png)
 
 This reduces the variance in outcomes because we have incorporated a known causal factor.  We can go further by adding additional inputs to our simulation (conditioning) for example, the heights of the parents:
 
-![p(x|sex,father_height,mother_height)](https://latex.codecogs.com/svg.image?p(x%7Csex,father_{height},mother_{height}))
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?p(x%7Csex,father_{height},mother_{height})" alt="p(x|sex,father_height,mother_height)">
+</p>
 
 ![3](img/3.png)
 
@@ -60,7 +78,9 @@ There will still be variance in this outcome; siblings of the same sex can diffe
 
 In reality, this is rarely possible. We do not know all hidden variables, nor how they interact.  In such cases, one way to interpret the remaining randomness is as the result of **marginalisation over hidden causes**.  For example, if we cannot know the conditions in the womb precisely, we can represent their influence as a random draw from a distribution describing plausible womb conditions:
 
-![p(x|var_1,...,var_n)=∫p(x|var_1,...,var_n,var_womb)p(womb)dwomb](https://latex.codecogs.com/svg.image?p(x%7Cvar_1,...,var_n)=\int%20p(x%7Cvar_1,...,var_n,var_{womb})p(womb)\,\mathrm{d}womb)
+<p align="center">
+<img src="https://latex.codecogs.com/svg.image?p(x%7Cvar_1,...,var_n)=\int%20p(x%7Cvar_1,...,var_n,var_{womb})p(womb)\mathrm{d}womb" alt="p(x|var_1,...,var_n)=∫p(x|var_1,...,var_n,var_womb)p(womb)dwomb">
+</p>
 
 ![4](img/4.png)
 
@@ -91,5 +111,3 @@ There are several ways to trade off realism against reproducibility:
 
 3. **Separate uncertainty from computation.**  
    When stochasticity is truly necessary, treat the *random seed* as an explicit input to the simulation. This preserves stochasticity whilst allowing exact reproducibility of specific runs.
-
-
