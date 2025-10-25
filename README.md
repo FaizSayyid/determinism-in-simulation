@@ -54,7 +54,7 @@ There will still be variance in this outcome; siblings of the same sex can diffe
 
 In reality, this is rarely possible. We do not know all hidden variables, nor how they interact.  In such cases, one way to interpret the remaining randomness is as the result of **marginalisation over hidden causes**.  For example, if we cannot know the conditions in the womb precisely, we can represent their influence as a random draw from a distribution describing plausible womb conditions:
 
-![p(x|var_1,...,var_n)=∫p(x|var_1,...,var_n,var_womb)p(womb) dwomb](https://latex.codecogs.com/svg.image?p(x%7Cvar_1,...,var_n)=\int%20p(x%7Cvar_1,...,var_n,var_{womb})\,p(womb)\,\mathrm{d}womb)
+![p(x|var_1,...,var_n)=∫p(x|var_1,...,var_n,var_womb)p(womb)dwomb](https://latex.codecogs.com/svg.image?p(x%7Cvar_1,...,var_n)=\int%20p(x%7Cvar_1,...,var_n,var_{womb})p(womb)\,\mathrm{d}womb)
 
 ### The resulotion of hidden variables
 As previously discussed in some systems a very small change in input can produce a very large change in output. If we can measure the variables with infinite precision (as a laplace's demon could) then there would be no variance in outcome. In reality computers have a limited amount of memory and as such cannot represent varaibles with infite precision even if they are known. Again with stochasticity we can attempt to marginalise over the uncertainty in precision. On the other hand if we presume that variables that we wish to model are integer valued or occupy a very small space then this stochasiticty isn't necessary.
