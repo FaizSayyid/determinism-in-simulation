@@ -56,31 +56,32 @@ In reality, this is rarely possible. We do not know all hidden variables, nor ho
 
 ![p(x|var_1,...,var_n)=∫p(x|var_1,...,var_n,var_womb)p(womb)dwomb](https://latex.codecogs.com/svg.image?p(x%7Cvar_1,...,var_n)=\int%20p(x%7Cvar_1,...,var_n,var_{womb})p(womb)\,\mathrm{d}womb)
 
-### The resulotion of hidden variables
-As previously discussed in some systems a very small change in input can produce a very large change in output. If we can measure the variables with infinite precision (as a laplace's demon could) then there would be no variance in outcome. In reality computers have a limited amount of memory and as such cannot represent varaibles with infite precision even if they are known. Again with stochasticity we can attempt to marginalise over the uncertainty in precision. On the other hand if we presume that variables that we wish to model are integer valued or occupy a very small space then this stochasiticty isn't necessary.
+### The Resolution of Hidden Variables
 
-### Summary
+As previously discussed, in some systems even a very small change in input can produce a very large change in output. If we could measure all variables with infinite precision (as Laplace’s demon could) then there would be no variance in the outcome. In reality, computers have finite memory and cannot represent variables with infinite precision, even if their true values are known.  Incorporating **stochasticity** can therefore serve as a principled way to marginalise over uncertainty in numerical precision.  On the other hand, if the variables being modelled are **integer-valued** or confined to a **small discrete space**, a deterministic simulation may be possible. 
+
+## Answering question 1: When is determinism plausible?
 A deterministic simulation is plausible only when:
 
 1. All relevant hidden variables are known  
 2. and measured with sufficient precision, and
 3. The system itself is not inherently stochastic (e.g. quantum or thermodynamic processes).
 
-In every other case, stochasticity serves as a principled way to represent our ignorance about the system’s unobserved states or limited numerical resolution.
+In every other case, stochasticity serves as a principled way to represent our ignorance about the system’s unobserved states, interactions or limited numerical resolution.
 
-## Realism vs reproducability
+## Answering question 2: When and how can realism/stochasity be traded for Reproducibility?
 
-In regulated domains such as pensions, healthcare, or insurance, it is often necessary to perfectly reproduce past results for audit purposes even when the underlying system is fundamentally stochastic. The challenge is therefore to design simulations that remain principled (accurately representing uncertainty) while being bitwise identical to the past.
+In regulated domains such as pensions, healthcare, or insurance, it is often necessary to **perfectly reproduce past results** for audit purposes, even when the underlying system is fundamentally stochastic. The challenge, therefore, is to design simulations that remain *principled* (accurately representing uncertainty) while being *bitwise identical* to the past.
 
 There are several ways to trade off realism against reproducibility:
 
-1. Ask broader questions rather than narrow ones.
-Broad, coarse questions may be answered accurately with simpler simulations. Simpler simulations depend on fewer variables, making it feasible to condition on all of them obviating the need to marginalize over ignorance. This shifts the model closer to determinism without misrepresenting the underlying system.
+1. **Ask broader rather than narrower questions.**  
+   Broad, coarse-grained questions can often be answered accurately with simpler simulations. Simpler simulations depend on fewer variables, making it feasible to condition on all of them — thus avoiding the need to marginalise over unknowns. This shifts the model closer to determinism without misrepresenting the underlying system.
 
-2. Frame questions around discrete or low precision variables.
-If the conditioning variables are integers or limited to coarse precision, the system’s state space is small. That makes it practical to enumerate or fix all relevant states, producing deterministic outputs. For example, modelling yearly transitions between discrete health states is far easier to audit than modelling continuous variables such as blood pressure.
+2. **Frame questions around discrete or low-precision variables.**  
+   If the conditioning variables are integers or limited to coarse precision, the system’s state space becomes small. That makes it practical to enumerate or fix all relevant states, producing deterministic outputs. For example, modelling yearly transitions between discrete health states is far easier to audit than modelling continuous variables such as blood pressure.
 
-3. Separate uncertainty from computation.
-When stochasticity is truely necessary, treat the random seed as an explicit input to the simulation. 
+3. **Separate uncertainty from computation.**  
+   When stochasticity is truly necessary, treat the *random seed* as an explicit input to the simulation. This preserves stochasticity whilst allowing exact reproducibility of specific runs.
 
 
