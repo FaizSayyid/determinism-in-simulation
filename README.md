@@ -62,7 +62,7 @@ This reduces the variance in outcomes because we have incorporated a known causa
 
 ![3](img/3.png)
 
-There will still be variance in this outcome; siblings of the same sex can differ in height, but adding these variables further reduces the spread of possible outcomes. We can imagine continuing to condition on more relevant variables, each time shrinking the variance of the predictive distribution.  In the limit, if we could condition on *all* relevant variables and fully understood the mechanics governing them, the distribution of heights would collapse to a **delta function** (a spike with zero variance) assuming no quantum-mechanical or irreversible processes. The more variables we know and condition on, the more deterministic the simulation becomes.
+There will still be variance in this outcome; siblings of the same sex can differ in height, but adding these variables further reduces the spread of possible outcomes. We can imagine continuing to condition on more relevant variables, each time shrinking the variance of the predictive distribution. In the limit, if we could condition on *all* relevant variables and fully understood the mechanics governing them, the distribution of heights would collapse to a **delta function** (a spike with zero variance) assuming no quantum-mechanical or irreversible processes. The more variables we know and condition on, the more deterministic the simulation becomes.
 
 ![4](img/4.png)
 
@@ -72,13 +72,14 @@ In reality, this is rarely possible. We do not know all hidden variables, nor ho
 <img src="https://latex.codecogs.com/svg.image?p(x%7Cvar_1,...,var_n)=\int%20p(x%7Cvar_1,...,var_n,var_{womb})p(womb)\mathrm{d}womb" alt="p(x|var_1,...,var_n)=∫p(x|var_1,...,var_n,var_womb)p(womb)dwomb">
 </p>
 
+#### An information theoretic perspective on the same process
 From an information theoretic POV each time we condition on an additional variable we reduce the **entropy** of our simulation outcomes. If \( X \) represents a simulated outcome (e.g. height) and \( Z \) represents all the variables we condition on (sex, parental height, etc.), then:
 
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?H(X\mid%20Z)\leq%20H(X)" alt="H(X|Z) ≤ H(X)">
 </p>
 
-As we incorporate more relevant causal information, the conditional entropy \( H(X\mid Z) \) approaches zero, meaning that \( X \) becomes deterministic given \( Z \).  In the limit where all relevant variables are known and measured with infinite precision the predictive distribution again collapses to a delta:
+As we condition on more and more relevant information, the conditional entropy \( H(X\mid Z) \) approaches zero, meaning that \( X \) becomes deterministic given \( Z \).  In the limit where all relevant variables are known and measured with infinite precision the predictive distribution again collapses to a delta:
 
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?p(x\mid%20Z_{\text{all}})=\delta(x-f(Z_{\text{all}}))" alt="p(x|Z_all)=δ(x−f(Z_all))">
