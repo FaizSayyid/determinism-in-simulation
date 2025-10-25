@@ -76,13 +76,15 @@ This reduces the variance in outcomes because we have incorporated a known causa
 
 There will still be variance in this outcome; siblings of the same sex can differ in height, but adding these variables further reduces the spread of possible outcomes. We can imagine continuing to condition on more relevant variables, each time shrinking the variance of the predictive distribution.  In the limit, if we could condition on *all* relevant variables and fully understood the mechanics governing them, the distribution of heights would collapse to a **delta function** (a spike with zero variance) assuming no quantum-mechanical or irreversible processes. The more variables we know and condition on, the more deterministic the simulation becomes.
 
+![4](img/4.png)
+
 In reality, this is rarely possible. We do not know all hidden variables, nor how they interact.  In such cases, one way to interpret the remaining randomness is as the result of **marginalisation over hidden causes**.  For example, if we cannot know the conditions in the womb precisely, we can represent their influence as a random draw from a distribution describing plausible womb conditions:
 
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?p(x%7Cvar_1,...,var_n)=\int%20p(x%7Cvar_1,...,var_n,var_{womb})p(womb)\mathrm{d}womb" alt="p(x|var_1,...,var_n)=∫p(x|var_1,...,var_n,var_womb)p(womb)dwomb">
 </p>
 
-![4](img/4.png)
+
 
 ### The Resolution of Hidden Variables
 
