@@ -1,6 +1,8 @@
 # Stochasticity, Determinism, and Reproducibility in Simulation
 
-There are many forms of simulation in the computational community.  One useful way to divide them is into **stochastic** and **deterministic**: that is, given the same input, should the model always produce the same output?  In this short article, we discuss when stochasticity is *absolutely necessary* and when/how it may be eliminated in the name of **reproducibility**.
+There are many forms of simulation in the computational community.  One useful way to divide them is into **stochastic** and **deterministic**: that is, given the same input, does the model always produce the same output. In this short article, we attempt to answer the questions of:
+1. When stochasticity is *absolutely necessary* ?
+2. When/how may it be eliminated in the name of **reproducibility**.
 
 ## Simulation
 What is the point of a simulation? The goal of a simulation is to answer a question by constructing a model of the system under study. An ideal simulation should capture the *essential* mechanics relevant to the question at hand without containing extraneous computational or mathematical details. If we capture too few details then the simulation will provide misleading answers. On the other hand if we include too many we risk modelling components that have no impact upon the question being studied. The art of simulation is therefore to capture the essentials of the system, acknowledging that smaller effects will neglected but hoping that their omission will not too matter too much. In general, broader questions can be addressed with simpler, more abstract simulations, whereas specific or fine-grained questions typically require greater simulation detail.
@@ -72,6 +74,8 @@ In reality, this is rarely possible. We do not know all hidden variables, nor ho
 <img src="https://latex.codecogs.com/svg.image?p(x%7Cvar_1,...,var_n)=\int%20p(x%7Cvar_1,...,var_n,var_{womb})p(womb)\mathrm{d}womb" alt="p(x|var_1,...,var_n)=∫p(x|var_1,...,var_n,var_womb)p(womb)dwomb">
 </p>
 
+In this example we have marginalised (integrated) over all possible values that the womb can take. We have removed the variable womb from the conditioning set as we do not know the values that it takes, which in turn increases the uncertainty in our model. As we cannot measure the womb variable we instead represent it with a probability distribution. If the nature of this distribution is well understood we can explicity marginalise this variable out and different outcomes of the womb variable will recieve different weightings. In the much more likely case that we do not know that the womb variable exists we are implicity marginalising the womb variable away by modelling the height as a random variable, with an expectation (average) that is composed of the variables that we do know. This is of course, like all modelling, is a bit of a fudge.
+
 #### An information theoretic perspective on the same process
 From an information theoretic POV each time we condition on an additional variable we reduce the **entropy** of our simulation outcomes. If \( X \) represents a simulated outcome (e.g. height) and \( Z \) represents all the variables we condition on (sex, parental height, etc.), then:
 
@@ -99,7 +103,7 @@ A deterministic simulation is plausible only when:
 2. and measured with sufficient precision, and
 3. The system itself is not inherently stochastic (e.g. quantum or thermodynamic processes).
 
-In every other case, stochasticity serves as a principled way to represent our ignorance about the system’s unobserved states, interactions or limited numerical resolution.
+In every other case, stochasticity serves as a principled way to represent our ignorance about the system’s unobserved states, interactions or limited numerical resolution. 
 
 ## Answering question 2: When and how can realism/stochasity be traded for Reproducibility?
 
