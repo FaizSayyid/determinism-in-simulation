@@ -147,4 +147,6 @@ There are several ways to trade off realism against reproducibility:
    When stochasticity is truly necessary, treat the *random seed* as an explicit input to the simulation. This preserves stochasticity whilst allowing exact reproducibility of specific runs.
 
 ## References
-Epstein, Joshua M. (2008). 'Why Model?'. Journal of Artificial Societies and Social Simulation 11(4)12 <https://www.jasss.org/11/4/12.html>.
+Epstein, Joshua M. (2008). 'Why Model?'. Journal of Artificial Societies and Social Simulation 11(4)12 <https://www.jasss.org/11/4/12.html>
+Jaynes, Probability Theory: The Logic of Science 
+Winsberg (2010), Science in the Age of Computer Simulation
