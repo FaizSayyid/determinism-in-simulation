@@ -7,6 +7,29 @@ There are many forms of simulation in the computational community.  One useful w
 ## Simulation
 What is the point of a simulation? The goal of a simulation is to answer a question by constructing a model of the system under study. An ideal simulation should capture the *essential* mechanics relevant to the question at hand without containing extraneous computational or mathematical details. If we capture too few details then the simulation will provide misleading answers. On the other hand if we include too many we risk modelling components that have no impact upon the question being studied. The art of simulation is therefore to capture the essentials of the system, acknowledging that smaller effects will neglected but hoping that their omission will not too matter too much. In general, broader questions can be addressed with simpler, more abstract simulations, whereas specific or fine-grained questions typically require greater simulation detail.
 
+### Simulation and Prediction
+In Joshua Epstein's seminal 2008 article "why model" Epstein discusses prediction:
+
+> "the next question inevitably arises: "But can you predict?" For some reason, the moment you posit a model, prediction—as in a crystal ball that can tell the future—is reflexively presumed to be your goal. Of course, prediction might be a goal, and it might well be feasible, particularly if one admits statistical prediction in which stationary distributions (of wealth or epidemic sizes, for instance) are the regularities of interest. I'm sure that before Newton, people would have said "the orbits of the planets will never be predicted." I don't see how macroscopic prediction—pacem Heisenberg—can be definitively and eternally precluded. But, more to the point, I can quickly think of 16 reasons other than prediction (at least in this bald sense) to build a model. In the space afforded, I cannot discuss all of these, and some have been treated en passant above. But, off the top of my head, and in no particular order, such modeling goals include:
+>
+>
+> Explain (very distinct from predict)
+Guide data collection
+Illuminate core dynamics
+Suggest dynamical analogies
+Discover new questions
+Promote a scientific habit of mind
+Bound (bracket) outcomes to plausible ranges
+Illuminate core uncertainties.
+Offer crisis options in near-real time
+Demonstrate tradeoffs / suggest efficiencies
+Challenge the robustness of prevailing theory through perturbations
+Expose prevailing wisdom as incompatible with available data
+Train practitioners
+Discipline the policy dialogue
+Educate the general public
+Reveal the apparently simple (complex) to be complex (simple)"
+
 A tempting question to ask is whether we could ever construct a simulation that perfectly predicts the future.
 
 ## Laplace’s Demon
@@ -123,3 +146,6 @@ There are several ways to trade off realism against reproducibility:
 
 3. **Separate uncertainty from computation.**  
    When stochasticity is truly necessary, treat the *random seed* as an explicit input to the simulation. This preserves stochasticity whilst allowing exact reproducibility of specific runs.
+
+## References
+Epstein, Joshua M. (2008). 'Why Model?'. Journal of Artificial Societies and Social Simulation 11(4)12 <https://www.jasss.org/11/4/12.html>.
