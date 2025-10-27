@@ -29,7 +29,7 @@ In Joshua Epstein's seminal 2008 article "why model" Epstein discusses predictio
 >15. Educate the general public
 >16. Reveal the apparently simple (complex) to be complex (simple)"
 
-A tempting question to ask is whether we could ever construct a simulation that perfectly predicts the future.
+Acknowleding that prediction is not the *only* goal of simulation, a tempting question to ask is how well can a simulation predict the future? Could we ever construct a simulation that perfectly predicts the future?
 
 ## Laplace’s Demon
 
