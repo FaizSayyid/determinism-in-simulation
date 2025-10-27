@@ -14,20 +14,20 @@ In Joshua Epstein's seminal 2008 article "why model" Epstein discusses predictio
 >
 >1. Explain (very distinct from predict)
 >2. Guide data collection
-3. Illuminate core dynamics
-4. Suggest dynamical analogies
-4. Discover new questions
-5. Promote a scientific habit of mind
-6.Bound (bracket) outcomes to plausible ranges
-7. Illuminate core uncertainties.
-8. Offer crisis options in near-real time
-9. Demonstrate tradeoffs / suggest efficiencies
-10. Challenge the robustness of prevailing theory through perturbations
-11. Expose prevailing wisdom as incompatible with available data
-12. Train practitioners
-13. Discipline the policy dialogue
-14. Educate the general public
-15. Reveal the apparently simple (complex) to be complex (simple)"
+>3. Illuminate core dynamics
+>4. Suggest dynamical analogies
+>5. Discover new questions
+>6. Promote a scientific habit of mind
+>7.Bound (bracket) outcomes to plausible ranges
+>8. Illuminate core uncertainties.
+>9. Offer crisis options in near-real time
+>10. Demonstrate tradeoffs / suggest efficiencies
+>11. Challenge the robustness of prevailing theory through perturbations
+>12. Expose prevailing wisdom as incompatible with available data
+>13. Train practitioners
+>14. Discipline the policy dialogue
+>15. Educate the general public
+>16. Reveal the apparently simple (complex) to be complex (simple)"
 
 A tempting question to ask is whether we could ever construct a simulation that perfectly predicts the future.
 
