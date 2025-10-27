@@ -11,24 +11,23 @@ What is the point of a simulation? The goal of a simulation is to answer a quest
 In Joshua Epstein's seminal 2008 article "why model" Epstein discusses prediction:
 
 > "the next question inevitably arises: "But can you predict?" For some reason, the moment you posit a model, prediction—as in a crystal ball that can tell the future—is reflexively presumed to be your goal. Of course, prediction might be a goal, and it might well be feasible, particularly if one admits statistical prediction in which stationary distributions (of wealth or epidemic sizes, for instance) are the regularities of interest. I'm sure that before Newton, people would have said "the orbits of the planets will never be predicted." I don't see how macroscopic prediction—pacem Heisenberg—can be definitively and eternally precluded. But, more to the point, I can quickly think of 16 reasons other than prediction (at least in this bald sense) to build a model. In the space afforded, I cannot discuss all of these, and some have been treated en passant above. But, off the top of my head, and in no particular order, such modeling goals include:
->
->
-> Explain (very distinct from predict)
-Guide data collection
-Illuminate core dynamics
-Suggest dynamical analogies
-Discover new questions
-Promote a scientific habit of mind
-Bound (bracket) outcomes to plausible ranges
-Illuminate core uncertainties.
-Offer crisis options in near-real time
-Demonstrate tradeoffs / suggest efficiencies
-Challenge the robustness of prevailing theory through perturbations
-Expose prevailing wisdom as incompatible with available data
-Train practitioners
-Discipline the policy dialogue
-Educate the general public
-Reveal the apparently simple (complex) to be complex (simple)"
+
+>1. Explain (very distinct from predict)
+2. Guide data collection
+3. Illuminate core dynamics
+4. Suggest dynamical analogies
+4. Discover new questions
+5. Promote a scientific habit of mind
+6.Bound (bracket) outcomes to plausible ranges
+7. Illuminate core uncertainties.
+8. Offer crisis options in near-real time
+9. Demonstrate tradeoffs / suggest efficiencies
+10. Challenge the robustness of prevailing theory through perturbations
+11. Expose prevailing wisdom as incompatible with available data
+12. Train practitioners
+13. Discipline the policy dialogue
+14. Educate the general public
+15. Reveal the apparently simple (complex) to be complex (simple)"
 
 A tempting question to ask is whether we could ever construct a simulation that perfectly predicts the future.
 
