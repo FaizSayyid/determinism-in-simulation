@@ -106,7 +106,7 @@ If the nature of this distribution is well understood we can explicity marginali
 If you find this concept of marginalisation confusing you can think of it as averaging over all the wombs we *might have observed* where each one weighted by how likely it is to exist in nature.
 
 #### An information theoretic perspective on the same process
-From an information theoretic POV each time we condition on an additional variable we reduce the **entropy** of our simulation outcomes. If \( X \) represents a simulated outcome (e.g. height) and \( Z \) represents all the variables we condition on (sex, parental height, etc.), then:
+From an information theoretic POV each time we condition on an additional variable we reduce the **entropy** of our simulation outcomes. If \( X \mid \) represents a simulated outcome (e.g. height) and \( Z \) represents all the variables we condition on (sex, parental height, etc.), then:
 
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?H(X\mid%20Z)\leq%20H(X)" alt="H(X|Z) ≤ H(X)">
