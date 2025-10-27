@@ -1,6 +1,9 @@
 # Stochasticity, Determinism, and Reproducibility in Simulation
 
-There are many forms of simulation in the computational community.  One useful way to divide them is into **stochastic** and **deterministic**: that is, given the same input, does the model always produce the same output. In this short article, we attempt to answer the questions of:
+There are many forms of simulation in the computational community.  One useful way to divide them is into **stochastic** and **deterministic**: that is, given the same input, does the model always produce the same output? 
+
+In this short article, we attempt to answer the questions:
+
 1. When stochasticity is *absolutely necessary* ?
 2. When/how may it be eliminated in the name of **reproducibility**.
 
