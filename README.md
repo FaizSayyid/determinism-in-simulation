@@ -11,9 +11,9 @@ What is the point of a simulation? The goal of a simulation is to answer a quest
 In Joshua Epstein's seminal 2008 article "why model" Epstein discusses prediction:
 
 > "the next question inevitably arises: "But can you predict?" For some reason, the moment you posit a model, prediction—as in a crystal ball that can tell the future—is reflexively presumed to be your goal. Of course, prediction might be a goal, and it might well be feasible, particularly if one admits statistical prediction in which stationary distributions (of wealth or epidemic sizes, for instance) are the regularities of interest. I'm sure that before Newton, people would have said "the orbits of the planets will never be predicted." I don't see how macroscopic prediction—pacem Heisenberg—can be definitively and eternally precluded. But, more to the point, I can quickly think of 16 reasons other than prediction (at least in this bald sense) to build a model. In the space afforded, I cannot discuss all of these, and some have been treated en passant above. But, off the top of my head, and in no particular order, such modeling goals include:
-
+>
 >1. Explain (very distinct from predict)
-2. Guide data collection
+>2. Guide data collection
 3. Illuminate core dynamics
 4. Suggest dynamical analogies
 4. Discover new questions
