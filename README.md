@@ -123,13 +123,13 @@ Uncertainty dissapears when the state of the system and its laws are completely 
 As previously discussed, in some systems even a very small change in input can produce a very large change in output. If we could measure all variables with infinite precision (as Laplace’s demon could) then there would be no variance in the outcome. In reality, computers have finite memory and cannot represent variables with infinite precision, even if their true values are known.  Incorporating **stochasticity** can therefore serve as a principled way to marginalise over uncertainty in numerical precision.  On the other hand, if the variables being modelled are **integer-valued** or confined to a **small discrete space**, a deterministic simulation may be possible. 
 
 ## Answering question 1: When is determinism plausible?
-A deterministic simulation is plausible only when:
+A deterministic simulation is only possible when:
 
 1. All relevant hidden variables are known  
 2. and measured with sufficient precision, and
 3. The system itself is not inherently stochastic (e.g. quantum or thermodynamic processes).
 
-In every other case, stochasticity serves as a principled way to represent our ignorance about the system’s unobserved states, interactions or limited numerical resolution. 
+In every other case stochasticity serves as a principled way to represent our ignorance about the system’s unobserved states, interactions or the limited numerical resolution of our equipment.
 
 ## Answering question 2: When and how can realism/stochasity be traded for Reproducibility?
 
