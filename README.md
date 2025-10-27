@@ -112,7 +112,7 @@ From an information theoretic POV each time we condition on an additional variab
 <img src="https://latex.codecogs.com/svg.image?H(X\mid%20Z)\leq%20H(X)" alt="H(X|Z) ≤ H(X)">
 </p>
 
-As we condition on more and more relevant information, the conditional entropy \( H(X\mid Z) \) approaches zero, meaning that \( X \) becomes deterministic given \( Z \).  In the limit where all relevant variables are known and measured with infinite precision the predictive distribution again collapses to a delta:
+As we condition on more and more relevant information, the conditional entropy \( H(X \mid Z) \) approaches zero, meaning that \( X \) becomes deterministic given \( Z \).  In the limit where all relevant variables are known and measured with infinite precision the predictive distribution again collapses to a delta:
 
 <p align="center">
 <img src="https://latex.codecogs.com/svg.image?p(x\mid%20Z_{\text{all}})=\delta(x-f(Z_{\text{all}}))" alt="p(x|Z_all)=δ(x−f(Z_all))">
